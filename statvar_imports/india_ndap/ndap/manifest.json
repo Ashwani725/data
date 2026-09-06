@@ -14,7 +14,8 @@
             "import_inputs": [
                 {
                     "template_mcf": "output/India_LifeExpectancy.tmcf",
-                    "cleaned_csv": "output/India_LifeExpectancy.csv"
+                    "cleaned_csv": "output/India_LifeExpectancy.csv",
+                    "node_mcf": "output/India_LifeExpectancy.mcf"
                 }
             ],
             "source_files": [
