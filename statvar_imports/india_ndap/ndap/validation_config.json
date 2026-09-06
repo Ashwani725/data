@@ -16,6 +16,15 @@
             "params": {}
         },
         {
+            "rule_id": "check_max_date_freshness",
+            "description": "Verifies that MaxDate is at least 2020 to prevent silent date regressions.",
+            "validator": "SQL_VALIDATOR",
+            "params": {
+                "query": "SELECT StatVar, MaxDate FROM stats",
+                "condition": "TRY_CAST(MaxDate AS INTEGER) >= 2020"
+            }
+        },
+        {
             "rule_id": "check_goldens_summary_report",
             "validator": "GOLDENS_CHECK",
             "params": {
